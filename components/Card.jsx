@@ -3,15 +3,12 @@ import { Image, Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-
 export default function Card({ image, name, email }) {
 
     const handleEmailLink = () => {
-        Linking.openURL(`mailto:lucas.allx@hotmail.com`);
+        Linking.openURL(`mailto:${email}`);
     }
 
     return (
         <View style={styles.container}>
-            <Image
-                source={{ uri: image }}
-                style={styles.image}
-            />
+            <Image source={{ uri: image }} style={styles.image} />
 
             <Text style={styles.fullName}>{name}</Text>
 
