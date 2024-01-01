@@ -1,40 +1,37 @@
 import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 import Card from './components/Card';
+import { useEffect, useState } from 'react';
 
 export default function App() {
+  const [userData, setUserData] = useState([])
+  const [fullName, setFullName] = useState('')
 
-  const data = [
-    { id: '1', image: 'https://img.freepik.com/fotos-premium/anime-menino-homem-avatar-ai-arte-generativa_225753-7457.jpg', name: 'Nome 1', email: 'email1@example.com' },
-  ];
+  const handleUserApiRequest = async () => {
+    const req = await fetch(`https://reqres.in/api/users/`)
+    const json = await req.json()
+    setUserData(json.data)
+  }
 
-  // const handleUserApiRequest = async () => {
-  //   const req = await fetch(`https://reqres.in/api/users/`)
-  //   const json = await req.json()
-  //   return json.data
-  // }
+  useEffect(() => {
+    handleUserApiRequest();
+  }, []);
+
+  // const data = [
+  //   { id: '1', image: 'https://img.freepik.com/fotos-premium/anime-menino-homem-avatar-ai-arte-generativa_225753-7457.jpg', name: 'Nome 1', email: 'email1@example.com' },
+  // ];
 
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar />
 
       <FlatList
-        data={data}
+        data={userData}
         renderItem={({ item }) => {
           return (
             <View>
               <Card
-                image={item.image}
-                name={item.name}
-                email={item.email}
-              />
-              <Card
-                image={item.image}
-                name={item.name}
-                email={item.email}
-              />
-              <Card
-                image={item.image}
-                name={item.name}
+                image={item.avatar}
+                name={`${item.first_name} ${item.last_name}`}
                 email={item.email}
               />
             </View>
