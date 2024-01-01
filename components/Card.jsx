@@ -1,6 +1,6 @@
 import { Image, Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default function Card() {
+export default function Card({ image, name, email }) {
 
     const handleEmailLink = () => {
         Linking.openURL(`mailto:lucas.allx@hotmail.com`);
@@ -9,14 +9,14 @@ export default function Card() {
     return (
         <View style={styles.container}>
             <Image
-                source={{ uri: 'https://img.freepik.com/fotos-premium/anime-menino-homem-avatar-ai-arte-generativa_225753-7457.jpg' }}
+                source={{ uri: image }}
                 style={styles.image}
             />
 
-            <Text style={styles.fullName}>Lucas Dias</Text>
+            <Text style={styles.fullName}>{name}</Text>
 
             <TouchableOpacity onPress={handleEmailLink}>
-                <Text style={styles.email}>lucas.allx@hotmail.com</Text>
+                <Text style={styles.email}>{email}</Text>
             </TouchableOpacity>
         </View>
     );
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         width: "100%",
         height: 200,
         borderRadius: 15,
-        marginBottom: 30
+        marginBottom: 20
     },
     fullName: {
         fontWeight: "bold",
