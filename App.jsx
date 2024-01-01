@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 
 export default function App() {
   const [userData, setUserData] = useState([])
-  const [fullName, setFullName] = useState('')
 
   const handleUserApiRequest = async () => {
     const req = await fetch(`https://reqres.in/api/users/`)
@@ -20,7 +19,6 @@ export default function App() {
   //   { id: '1', image: 'https://img.freepik.com/fotos-premium/anime-menino-homem-avatar-ai-arte-generativa_225753-7457.jpg', name: 'Nome 1', email: 'email1@example.com' },
   // ];
 
-  // https://api-ninjas.com/api/quotes - Add quotes?
 
   return (
     <SafeAreaView style={styles.container}>

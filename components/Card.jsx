@@ -16,10 +16,10 @@ export default function Card({ image, name, email }) {
                 <Text style={styles.email}>{email}</Text>
             </TouchableOpacity>
 
-            <View>
+            {/* <View>
                 <Text style={styles.aboutQuote}>About me:</Text>
                 <Text style={styles.userQuote}>User quote User quote User quote User quote User quote User quote</Text>
-            </View>
+            </View> */}
         </View>
     );
 }
@@ -49,13 +49,13 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginBottom: 15
     },
-    aboutQuote: {
-        fontSize: 16,
-        fontWeight: "bold",
-        marginBottom: 5
-    },
-    userQuote: {
-        fontStyle: "italic",
-        fontSize: 12,
-    }
+    // aboutQuote: {
+    //     fontSize: 16,
+    //     fontWeight: "bold",
+    //     marginBottom: 5
+    // },
+    // userQuote: {
+    //     fontStyle: "italic",
+    //     fontSize: 12,
+    // }
 });
