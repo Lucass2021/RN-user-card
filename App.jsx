@@ -20,6 +20,8 @@ export default function App() {
   //   { id: '1', image: 'https://img.freepik.com/fotos-premium/anime-menino-homem-avatar-ai-arte-generativa_225753-7457.jpg', name: 'Nome 1', email: 'email1@example.com' },
   // ];
 
+  // https://api-ninjas.com/api/quotes - Add quotes?
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar />

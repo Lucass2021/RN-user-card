@@ -15,6 +15,11 @@ export default function Card({ image, name, email }) {
             <TouchableOpacity onPress={handleEmailLink}>
                 <Text style={styles.email}>{email}</Text>
             </TouchableOpacity>
+
+            <View>
+                <Text style={styles.aboutQuote}>About me:</Text>
+                <Text style={styles.userQuote}>User quote User quote User quote User quote User quote User quote</Text>
+            </View>
         </View>
     );
 }
@@ -37,17 +42,20 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 20,
         textAlign: "center",
-        marginBottom: 5
+        marginBottom: 0
     },
     email: {
         fontSize: 16,
         textAlign: "center",
+        marginBottom: 15
+    },
+    aboutQuote: {
+        fontSize: 16,
+        fontWeight: "bold",
+        marginBottom: 5
+    },
+    userQuote: {
+        fontStyle: "italic",
+        fontSize: 12,
     }
 });
-
-
-// https://reqres.in/api/users/
-// avatar
-// full name
-// email
-// https://api-ninjas.com/api/quotes - Add quotes?
