@@ -9,7 +9,7 @@
 
 ## 📝 Description
 
-> This is a simple project with the objetive to practice API request in React/React Native.
+> This is a simple project with the objective to practice API request in React/React Native.
 ---
 
 ## 🚀 Technologies
@@ -26,7 +26,7 @@ This project was developed with the following technologies:
 
 
 <h1 align="center">
-    <img src="./git-assets/project.jpg"/>
+    <img src="https://raw.githubusercontent.com/Lucass2021/RN-user-card/main/git_assets/project.jpg"/>
 </h1>
 
 
