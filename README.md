@@ -22,7 +22,7 @@ This project was developed with the following technologies:
 > Run npm install to install dependencies<br>
 > Use npm run start or npm run tunnel to start the project <br>
 > Press A to open in Android enviorent and I to open in IOS enviorent<br>
-> If you don't have any enviorment install download Expo Go in your phone and scan the QR CODE<br>
+> If you don't have any enviorment download Expo Go in your phone and scan the QR CODE<br>
 
 
 <h1 align="center">
